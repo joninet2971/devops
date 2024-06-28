@@ -1,0 +1,25 @@
+{% extends 'template_base.html' %}
+
+{% block titulo %}
+    <h1>Productos</h1>
+{% endblock %}
+{% block contenido %}
+<a href="/agregarproducto" class="btn btn-primary btn-sm">Agregar Producto</a>
+<br>
+<table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>Producto</th>
+            <th>Categoria</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for producto in productos %}
+        <tr>
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.categoria}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

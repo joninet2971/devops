@@ -1,0 +1,21 @@
+{% extends 'template_base.html' %}
+
+{% block titulo %}
+    <h1>Agregar productos</h1>
+{% endblock %}
+{% block contenido %}
+<div class="container mt-5">
+    <h2>Agregar Producto</h2>
+    <form action="/agregarproducto" method="post">
+        <div class="form-group">
+            <label for="nombre">Nombre del Producto</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce el nombre del producto" required>
+        </div>
+        <div class="form-group">
+            <label for="categoria">Categoría</label>
+            <input type="text" class="form-control" id="categoria" name="categoria" placeholder="Introduce la categoría" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar Producto</button>
+    </form>
+</div>
+{% endblock %}
